@@ -17,4 +17,4 @@ Architecture of the Active Directory and Splunk Server connection Home Lab:
         - https://www.splunk.com/en_us/blog/learn/splunk-universal-forwarder.html
         - https://docs.splunk.com/Documentation/Forwarder/9.2.1/Forwarder/Abouttheuniversalforwarder
 
-[ActiveDirectoryHomeLab.drawio.pdf](https://github.com/user-attachments/files/15523629/ActiveDirectoryHomeLab.drawio.pdf)
+![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/b92ff215-4b56-4153-ae4e-899835bf5208)
