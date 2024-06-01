@@ -7,7 +7,7 @@ This project involves configuring Active Directory within Windows Server 2022, a
 Architecture of the Active Directory and Splunk Server connection Home Lab:
 - Active Directory
 - Active Directory Domain Services (AD DS)
-    - Active Directory Domain Services is a feature provided by Windows Server that is a distributed database for centralized management of organizational units (OUs) such as users, groups, or computers. Through logon authentication, domain users can access resources; and administrators can regulate access to resources from access controls features and perform policy-based adminisiration to efficiently manage complex networks.
+    - Active Directory Domain Services is a feature provided by Windows Server that is a distributed database for centralized management of organizational units (OUs) such as users, groups, or computers. Through logon authentication, domain users can access resources; and administrators can regulate access to resources using access controls features and perform policy-based adminisiration to efficiently manage complex networks.
         -  https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831484(v=ws.11)
 - Splunk Enterprise Server
     - Splunk Enterprise is software that performs data ingestion from several sources such as endpoints, applications, or websites. Once data sources are defined, data is processed and stored to be indexed into events that can be searched for within a web dashboard. Within the Splunk web dashboard, alerts and reports can be generated as well to perform more detailed analysis on events and whether a true positive attack or breach has occured.
