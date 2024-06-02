@@ -27,3 +27,8 @@ The steps for this include: select  the virtual machine > selecting the *Setting
 
 ![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/b4ed1985-a640-4e72-9ea6-9c8bbdff9a9f)
 
+## References 
+* https://www.virtualbox.org/manual/ch06.html#network_nat_service
+* https://www.virtualbox.org/manual/ch01.html#gui-tools
+* https://www.virtualbox.org/manual/ch06.html#network-manager
+* https://www.virtualbox.org/manual/ch06.html#network-manager-nat-network-tab
