@@ -20,7 +20,7 @@ For the NAT Network properties I chose for this Active Directory lab, I changed 
 
 ![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/88e765d8-46ef-4fc3-a28b-803ad2803dd1)
 
-## Connecting your virtual machines to the NAT Network
+## Connecting Virtual Machines to the NAT Network on VirtualBox
 
 After configuring my NAT network **(192.168.10.0/24)** I enabled the virtual network adapters of my virtual machines to attach to my **ADHomeLab** NAT Network.
 The steps for this include: select  the virtual machine > selecting the *Settings* option > heading to the *Network* tab > enabling the *Enable Network Adapter* option, attaching to the **NAT Network** option, and selecting the NAT Network name, mine being **ADHomeLAB**
