@@ -21,5 +21,4 @@ This project involves configuring Active Directory within Windows Server 2022, a
         - https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon    
 
 
-
-             ![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/3911f98b-7785-4116-a350-45f5da4e1e93)
+![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/83530391-75e7-4186-a13d-fc1f30e82c4a)
