@@ -16,5 +16,12 @@ Architecture of the Active Directory and Splunk Server connection Home Lab:
     - A lightweight component of Splunk Enterprise used to collect and forward data to a centralized Splunk instance indexer, from which log analysis can be performed from the endpoints that have the Universal Forwarder downloaded.
         - https://www.splunk.com/en_us/blog/learn/splunk-universal-forwarder.html
         - https://docs.splunk.com/Documentation/Forwarder/9.2.1/Forwarder/Abouttheuniversalforwarder
+     
+-   Sysmon
+    -   
 
-![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/b92ff215-4b56-4153-ae4e-899835bf5208)
+
+
+
+
+![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/3911f98b-7785-4116-a350-45f5da4e1e93)
