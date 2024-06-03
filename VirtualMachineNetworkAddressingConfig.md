@@ -42,10 +42,14 @@ Now to set the static IP on the Ubuntu Server, the steps are:
   * It is within this directory where the Netplan utility is found to configure networking for cases such as configuring static IPs, DHCP, or defining DNS servers. 
 
 * When the YAML file is opened, update the *dhcp4:* section to **no**
-  * Then press *ENTER* on the keyboard to create a new line and press *TAB* **3** times before typing in an *addresses:* section underneath the *dhcp4:* section with the static IPv4 chosen for the Ubuntu Server and add the subnet mask in Classless Inter-Domain Routing (CIDR) notation; For example, my configuration was **[192.168.10.10/24]**.
-  * Enter a new line for another section underneath *addresses:* and then press *TAB* **3** times before typing in a new section called *nameservers:*. Press the space button on the keyboard, and then press *ENTER* and then press *TAB* **5** times to add another section underneath *nameservers:* that will also be called *addresses:* and input the DNS server of your choice; I input Google's DNS server as **[8.8.8.8]
-  * Press *Enter* on your keyboard to add another line and then press the *TAB* button on your keyboard  **3** times, from which you will then enter **routes:**. Afterward, I pressed *Enter* and hit the *TAB* button **5** times before having typed in **-to: default**. 
-  * Hit *Enter* another time and hit *TAB*  6 times, from which you will input your default gateway IP address with the section *via:*; I input **via: 192.168.10.1**, as this includes the default gateway I used.
+  * Then press *ENTER* on the keyboard to create a new line and press *TAB* **3** times before typing in an *addresses:* section underneath the *dhcp4:* section with the static IPv4 chosen for the Ubuntu Server
+    * Ensure you add the subnet mask in the *addresses:* section in Classless Inter-Domain Routing (CIDR) notation; For example, my configuration was **[192.168.10.10/24]**.
+  * Enter a new line for another section underneath *addresses:* and then press *TAB* **3** times before typing in a new section called *nameservers:*.
+    * Press the space button on the keyboard, and then press *ENTER* and then press *TAB* **5** times to add another section underneath *nameservers:* that will also be called *addresses:* and input the DNS server of your choice; I input Google's DNS server **[8.8.8.8]**.
+  * Press *Enter* on your keyboard to add another line and then press the *TAB* button on your keyboard  **3** times, from which you will then enter **routes:**.
+    * Afterward, I pressed *Enter* and hit the *TAB* button **5** times before having typed in **-to: default**. 
+  * Hit *Enter* another time and hit *TAB*  6 times, from which you will input your default gateway IP address with the section *via:*.
+    *  I input **via: 192.168.10.1**, as this includes the default gateway I used.
  
  ![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/4644abe7-7b94-42cb-b3d5-d99d152ff934)
 
