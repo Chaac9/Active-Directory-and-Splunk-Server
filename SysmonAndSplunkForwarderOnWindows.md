@@ -10,7 +10,7 @@ One of the first steps to be conducted is to change the name of the computers fo
 
 ## Description 
 
-The Splunk Universal Forwarders are used to send telemetry data to the Splunk Server that was downloaded onto the Ubuntu Server Virtual Machine. In addition to downloading the agents for Splunk, we will also configure an index file from which only certain logs and events that may correlate with anomalous or malicious activity will be collected by the Windows devices. 
+The Splunk Universal Forwarders send telemetry data to the Splunk Server that was downloaded onto the Ubuntu Server Virtual Machine. In addition to downloading the agents for Splunk, we will also configure an index file from which only certain logs and events that may correlate with anomalous or malicious activity will be collected by the Windows devices. 
 
 * While in either of your Windows virtual machines, the first step to download the Universal Forwarder is to go back to the Splunk website, log in, and then head into *Products* > *Free Trials and Downloads*
   * Afterwards head to the *Universal Forwarder* section and select the *Get My Free Download* option.
@@ -31,7 +31,24 @@ Once the Universal Forwarder has successfully downloaded, an input configuration
 
 * To create and configure this inputs file, head into *File Explorer* and then select the drop-down menu for *This PC* 
   * Then select the **Local Disk (C:)** option > select **Program Files** > **SplunkUniversalForwarder** > **etc** > **system** > **local**
-    * The *inputs.conf* file will be created within the *local* directory  
+    * The *inputs.conf* file will be created within the *local* directory
+    * The file name is called **inputs.conf** and type is configured to **All Files**
 ![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/2b4bd061-f06d-4e37-b973-c6ba84ce9e22)
+![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/12938fb1-e0b0-4508-9f5c-6a1677f426d1)
+
+
+ * Once the **inputs.conf** is updated, the Universal Forwarder service must be restarted anytime the configuration file is updated
+  * To do this, type in *services* in the Windows search bar  and select the **Run as administrator** option 
+![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/b0c727ef-21d7-4c22-820b-4e5eee18e813)
+
+
+ * Once in the *services* window find the **SplunkForwarder* service and select the **Properties** option after right-clicking on the service.
+  * In the **General** tab ensure that the *Startup type:* is configured to **Automatic**
+  * Under the **Service status:**  you can *Stop* the service and then *Start* it again to ensure the SplunkForwarder updates successfully.
+  * In the *Services* page you can also select to **Restart** option, but if given the option that it cannot be restarted, then you can *Stop* and *Start* the service as another option to restart the service.
+    
+![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/fd9e58cb-204f-4496-9f21-91790967013c)
+
+## Downloading Sysmon onto the Windows Virtual Machines 
 
 
