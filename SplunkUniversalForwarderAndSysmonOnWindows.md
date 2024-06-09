@@ -85,3 +85,40 @@ Go through the download to ensure it is configured on the device
 ![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/a990ac97-e1de-4150-b30a-29d28cd51614)
 
 * Ensure you restart the **Splunk Universal Forwarder** afterwards in *Windows Services* to ensure data is collected correctly for Sysmon
+
+## Creating an Index in Splunk and Checking Logs from Splunk 
+
+During the setup of the Splunk Universal Forwarder, an inputs.config file was configured so only specific logs were collected to be sent to Splunk.
+
+Within that inputs.config file, it showed that all logs collected would be sent to a Splunk index named *endpoint* 
+![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/be10393f-d063-4055-b5e4-2f9ef94d67c0)
+
+
+Since the Splunk Universal Forwarder and Sysmon have been configured for both Windows devices (Windows Server 2022 and Windows 10 Pro), the next step would be to create an index called *endpoint* within the Splunk online dashboard for log analysis 
+* The first step is to turn on the *Ubuntu Server* if it is not online, and log in.
+* Afterwards, log in onto the Splunk Dashboard from any of the Windows OS devices
+![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/eaa93a06-05d0-4731-b7aa-4d719b0021b7)
+
+* To Create an Index named *endpoint* head to **Settings** > **Indexes** > **New Index**
+![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/5bc74f20-d01e-4357-8215-3fe7ef91303e)
+
+ * For the Index Name input *endpoint** and leave all other configuration options as default before saving and creating the index
+ ![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/0eede5b7-8540-4410-b8c2-a42e88a6ca35)
+
+* Now the Splunk Server will be configured to collect data from the Windows OS devices which have the Splunk Universal Forwarder
+  * Head into **Settings** > **Forwarding and receiving** > **Configure receiving** > **New Receiving Port** 
+![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/6f3cb9ac-9632-40ee-b085-611df5ef0665)
+
+ *  For the port, add **9997**, as that is the port used during the initial download setup for the Universal Splunk Forwarder
+![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/a8a13bb3-27f4-4e9a-b2d1-ec03429db94b)
+
+Once everything has been set, collected logs from the Windows OS devices can be located using the index *endpoint* within *Search and Reporting* 
+* In the Splunk platform go to **Apps** > **Search and Reporting**
+  * Within the Search Bar input **index = endpoint** and  change the time frame to **All Time**
+    * The reason why I changed the time frame is because there may have been no events collected within smaller time frames, for reasons such as the Windows virtual machines not being online during those smaller time frames
+    * In the *fields* area, you can confirm that events are being collected from both Windows machines in the **Host** field
+    
+![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/bbc6331c-cb09-4fd7-9454-d30e7b9bd67e)
+
+![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/2d724936-545b-4265-b380-77d2ec2ed0f1)
+
