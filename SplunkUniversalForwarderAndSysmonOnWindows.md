@@ -71,6 +71,7 @@ To download System Monitor, go to your web browser and search for **sysmon by Sy
 ![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/10a4b163-4ced-41ba-a6bb-4fbf116a9d26)
 
 * Once downloaded, locate the compressed folder right-click the folder, and then selecting **Extract All..** to extract all files within the compressed folder
+  
 ![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/ea00625f-f42f-49a5-946d-2a2aa248efe2)
 
 * When you see the uncompressed Sysmon folder, enter it and then copy the file path to be used in its download through Powershell with administrator privileges. 
