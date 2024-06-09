@@ -49,7 +49,7 @@ Once the Universal Forwarder has successfully downloaded, an input configuration
     
 ![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/fd9e58cb-204f-4496-9f21-91790967013c)
 
-## Downloading Sysmon onto the Windows Virtual Machines 
+# Downloading Sysmon onto the Windows Virtual Machines 
 
 System Monitor is a Windows system service that logs system activity to the Windows Event log. Splunk can collect telemetry data from System Monitor (Sysmon). 
 
