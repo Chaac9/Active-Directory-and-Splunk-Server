@@ -50,3 +50,38 @@ Once the Universal Forwarder has successfully downloaded, an input configuration
 ![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/fd9e58cb-204f-4496-9f21-91790967013c)
 
 ## Downloading Sysmon onto the Windows Virtual Machines 
+
+System Monitor is a Windows system service that logs system activity to the Windows Event log. Splunk can collect telemetry data from System Monitor (Sysmon). 
+
+The first thing I did was download the Sysmon configuration file to be used during the application download of Sysmon on the Windows device, afterwards, I downloaded Sysmon from Microsoft and then executed the application with the configuration file 
+
+***
+## Configuration file for Sysmon to ensure only specific events crucial to Security are collected
+
+I downloaded a system monitor (Sysmon) configuration file by GitHub user olafhartong. The reason for using this configuration file is to assist in reducing noise by not logging all events for Splunk to use, as well as ensuring only critical events that may be indicative of anomalous or malicious behavior are collected. In addition, this configuration file will also ensure system performance does not overload system resources by having it log every event. 
+
+https://github.com/olafhartong/sysmon-modular/blob/master/sysmonconfig.xml
+* When on the GitHub page, select the *Raw* option to open up the raw data on a different browser page to be downloaded
+ * Right-click the page and select *save as* to save the configuration file as an XML file to any directory, from which you can access it soon.
+
+*** 
+To download System Monitor, go to your web browser and search for **sysmon by Sysinternals** 
+* The first web link should be from Microsoft Learn, where the service can be downloaded
+* https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#Introduction
+![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/10a4b163-4ced-41ba-a6bb-4fbf116a9d26)
+
+* Once downloaded, locate the compressed folder right-click the folder, and then selecting **Extract All..** to extract all files within the compressed folder
+![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/ea00625f-f42f-49a5-946d-2a2aa248efe2)
+
+* When you see the uncompressed Sysmon folder, enter it and then copy the file path to be used in its download through Powershell with administrator privileges. 
+![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/e0772da7-dc1f-4a18-998e-eb0e95b0e0f1)
+
+* Open up Powershell with administrator privileges, and then type in **cd <filepath>**
+ * Replace <filepath> in the command with the file path to the Sysmon folder that was uncompressed during its initial download from Microsoft. 
+
+* Once in the directory for the uncompressed Sysmon folder, we will execute the Sysmon application to download with our Sysmon configuration file with the command **.\Sysmon64.exe -i ..\sysmonconfig.xml**
+
+Go through the download to ensure it is configured on the device 
+![image](https://github.com/Chaac9/Active-Directory-and-Splunk-Server/assets/98796264/a990ac97-e1de-4150-b30a-29d28cd51614)
+
+* Ensure you restart the **Splunk Universal Forwarder** afterwards in *Windows Services* to ensure data is collected correctly for Sysmon
